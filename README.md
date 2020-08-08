@@ -30,7 +30,7 @@ The user are able to:
   * View multiple the combined weight of multiple exercises on the `stats` page.
 
 
-![deployed application] ()
+![deployed application] (https://fitter-than-ever.herokuapp.com/?id=5f2e3c42bb9321001711d2d5)
 
 
 
