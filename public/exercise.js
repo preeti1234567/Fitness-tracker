@@ -33,10 +33,9 @@ initExercise();
 
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
-  resetWorkoutTypeChange();
-}
+  
 
-function resetWorkoutTypeChange() {    
+ 
   if (workoutType === "cardio") {
     cardioForm.classList.remove("d-none");
     resistanceForm.classList.add("d-none");
@@ -138,10 +137,7 @@ function clearInputs() {
   repsInput.value = "";
   resistanceDurationInput.value = "";
   weightInput.value = "";  
-  workoutTypeSelect.value = "Select Exercise Type";
-  resetWorkoutTypeChange();
-  cardioForm.classList.add("d-none");
-  resistanceForm.classList.add("d-none");  
+  
 }
 
 if (workoutTypeSelect) {
