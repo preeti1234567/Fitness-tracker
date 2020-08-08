@@ -32,4 +32,8 @@ The user are able to:
 
 ![deployed application] ()
 
-![deployed application](The URL to the Github repository)
+
+
+![Snapshot](images/fitnesstracker.png)
+![Snapshot](images/fitnesstracker2.png)
+![Snapshot](images/fitnesstracker3.png)
