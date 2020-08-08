@@ -22,7 +22,6 @@ async function initExercise() {
 
   if (location.search.split("=")[1] === undefined) {
     workout = await API.createWorkout()
-    console.log(workout)
   }
   if (workout) {
     location.search = "?id=" + workout._id;
@@ -34,7 +33,10 @@ initExercise();
 
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
+  resetWorkoutTypeChange();
+}
 
+function resetWorkoutTypeChange() {    
   if (workoutType === "cardio") {
     cardioForm.classList.remove("d-none");
     resistanceForm.classList.add("d-none");
@@ -115,6 +117,7 @@ async function handleFormSubmit(event) {
   }
 
   await API.addExercise(workoutData);
+ 
   clearInputs();
   toast.classList.add("success");
 }
@@ -134,7 +137,11 @@ function clearInputs() {
   durationInput.value = "";
   repsInput.value = "";
   resistanceDurationInput.value = "";
-  weightInput.value = "";
+  weightInput.value = "";  
+  workoutTypeSelect.value = "Select Exercise Type";
+  resetWorkoutTypeChange();
+  cardioForm.classList.add("d-none");
+  resistanceForm.classList.add("d-none");  
 }
 
 if (workoutTypeSelect) {
